@@ -5,15 +5,12 @@ import DrawerUi from "../../../ui/DrawerUi";
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const toggleDrawer = (newOpen) => () => {
-    console.log({ newOpen });
     setIsDrawerOpen(newOpen);
   };
-  console.log({ isDrawerOpen });
   return (
-    <div className="md:hidden flex justify-between items-center border-2 border-amber-50 p-2 rounded-2xl ">
-      <div>VED</div>
+    <div className="md:hidden flex justify-end items-center p-2 h-12">
       <div onClick={toggleDrawer(true)}>
-        <MenuIcon />
+        <MenuIcon fontSize="large" />
       </div>
       <DrawerUi
         setIsDrawerOpen={setIsDrawerOpen}
